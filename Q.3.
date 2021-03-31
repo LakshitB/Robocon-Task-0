@@ -1,0 +1,21 @@
+n=input()
+n=int(n)
+s=input()
+#takes in both the inputs and converts the data type of n from string to int
+s = s.replace(' ','')
+#removes the spaces in between the string s
+k=0
+#logic for the loop- firstly it would check wethear the value of nth element from begining and ending is same or not, then it will check wether the alphabet in position 0 is of an acii value less than or equal to ascii value of the alphabet at position 1.(ascivalues order a,b,c,d...). It check this all till k=n/2+1th element.
+while(k<=n/2+1):
+  if(s[k]==s[-1-k]):
+    if(ord(s[k])<=ord(s[k+1])):
+      k=k+1
+    else:
+      break
+  else:
+    break
+#now since we iterated till n/2+1th term, we should check wethear the k was set to n/2+1 or not. if yes it satisfies and if no it fails.
+if(k==n/2+1):
+  print("true")
+else:
+  print("false")
