@@ -1,0 +1,20 @@
+s =input()
+#takes the input of string
+if(len(s)%3 == 0 and s.count('b') == s.count('o') and s.count('o') == s.count('t')):
+#checks wether the string length is a multiple of 3 or not. then it checks wethear the no. of b=o=t. Cuz for the given condition to happen these 2 are must. If it fails here, we need not to go through whole loop which saves runtime.
+  l=0
+  while(l!=-1):
+    l=s.find('bot')
+#here we are finding the index at which the word bot(1st occuring) is present, assigning l to it.
+    s=s[:l]+s[l+3:]
+#using this we are cutting the string in such a way that the whole string is printed except the "bot" which we found using find.
+
+  if(s==''):
+    print("true")
+#on reiterating this logic several times if we are left with empty string then the string satisfies condition.
+  else:
+    print('false')
+    
+
+else:
+  print('false')  
