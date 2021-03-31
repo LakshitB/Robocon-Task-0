@@ -1,0 +1,19 @@
+n1=int(input())
+#taking input as no. of pairs
+def inverter(numk):
+#this is a funtion which inverts the digits of an integer
+  invnumk=0
+  while(numk>0):
+    invnumk= numk%10
+    invnumk = (invnumk*10) + invnumk
+    numk = numk//10
+def solver(num1,num2):
+#this is a solver function. It takes 2 integers as input and then inverts them using inverter. then adds them. Then agai inverts them. And prints the answer
+  k=inverter(num1)+inverter(num2)
+  return(inverter(k))
+while(n1>0):
+  a=int(input())
+  b=int(input())
+#taking the input of 2 numbers and then solving it by sending it as inputs for solver function.
+  solver(a,b)
+  n1=n1-1
